@@ -30,6 +30,7 @@ import {
   TeacherQuizzes,
   SecteursPage,
   SchedulerPage,
+  QuizAnalyze,
 } from '../pages';
 
 const RouteConfig = () => {
