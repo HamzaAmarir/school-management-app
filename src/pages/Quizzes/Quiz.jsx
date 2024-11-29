@@ -247,7 +247,7 @@ const Quiz = () => {
 
         <div className="text-center mt-8">
           <button className="btn btn-primary btn-wide" onClick={() => handleRetryQuiz()}>
-            Retry Quiz
+            See Analyze
           </button>
         </div>
       </div>
