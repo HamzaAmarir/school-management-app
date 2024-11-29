@@ -215,7 +215,7 @@ const RouteConfig = () => {
         <Route
           path="/quizanalyze"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute allowedRoles={['trainee']}>
               <QuizAnalyze />
             </ProtectedRoute>
           }
