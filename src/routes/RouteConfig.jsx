@@ -212,6 +212,14 @@ const RouteConfig = () => {
           }
         />
         <Route
+          path="/quizanalyze"
+          element={
+            <ProtectedRoute>
+              <QuizAnalyze />
+            </ProtectedRoute>
+          }
+        />
+        <Route
           path="/quizzes/all-questions/:quizId"
           element={
             <ProtectedRoute allowedRoles={['trainer']}>
