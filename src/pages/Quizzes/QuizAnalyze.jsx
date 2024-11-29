@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { chatSession } from './AiModelAnalyze';
 import { CheckCircle, AlertCircle, Lightbulb } from 'lucide-react';  // Icons from lucide
+import { LoadingSpinner } from '../../components';
 
 const QuizAnalyze = () => {
   const { questionAnswers } = useSelector((state) => state.quizzes);
@@ -30,12 +31,11 @@ const QuizAnalyze = () => {
   }, [questionAnswers]);
 
   if (!analysisResult) {
-    return <div className="text-center">Loading analysis...</div>;
+    return <LoadingSpinner />;
   }
 
   // Assuming the response structure is in this format:
   const { points_forts, domaines_d_amélioration, recommandations } = JSON.parse(analysisResult);
-  console.log(analysisResult);
   return (
     <div className="p-6 space-y-6">
       <h2 className="text-3xl font-semibold text-center text-primary">Feedback sur le quiz</h2>
